@@ -1,0 +1,25 @@
+{
+  "name": "hash-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "6.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anstag/nodejs-itmo/tree/master/hash-generator"
+  },
+  "keywords": [
+    "node",
+    "sha1",
+    "md5",
+    "hash"
+  ],
+  "author": "Ampilogov Nikolay",
+  "license": "ISC"
+}

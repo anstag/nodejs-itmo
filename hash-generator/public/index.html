@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset="utf8">
+  <title>Hash generator</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script>
+     $(()=>{
+        $('input').on('keyup', function(){
+       		$.ajax({
+              url: 'http://hash-generator:4444/display',
+              data: {	src: $('#text').val(),
+                     	hash: $('#hash').val(),
+                     	type: $('#type').val()
+                     },
+              method: 'GET'
+         	}) 
+         .done( result => {
+            $('div').html('').append(JSON.stringify(result));
+         });
+     	});
+     });
+  </script>
+ </head>
+ <body>
+    <h2>Вводите текст в поле</h2>
+   	<input type="text" name="src" id="text">
+   <select id="hash">
+     <option id="md5">md5</option>
+     <option id="sha1">sha1</option>
+   </select>
+   <select id="type">
+     <option id="json">json</option>
+     <option id="text">text</option>
+   </select>
+   <div></div>
+ </body>
+</html>
